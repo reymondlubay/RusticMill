@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cutive&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aladin&display=swap");
+@import url("../fonts/sf-ui-text/SFUIText-Light.woff");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+/*
+ CSS for the main interaction
+*/
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*
+ Styling
+*/
+.tabset > label {
+  position: relative;
+  display: inline-block;
+  padding: 15px 15px 25px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #ECDDB6;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.tabset > label:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 20px;
+  width: 80%;
+  height: 4px;
+  background: #ECDDB6;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transition: -webkit-transform ease-in-out 250ms;
+  transition: -webkit-transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
+}
+
+.tabset > label:nth-child(4)::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 20px;
+  width: 85%;
+  height: 4px;
+  background: #ECDDB6;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transition: -webkit-transform ease-in-out 250ms;
+  transition: -webkit-transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
+}
+
+.tabset > label:hover,
+.tabset > input:focus + label {
+  color: #ECDDB6;
+}
+
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+  background: offWhite;
+}
+
+.tabset > input:checked + label::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.tab-panels {
+  padding: 30px 0;
+  border-top: 1px solid #333;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 8;
+  grid-column: 2/10;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  justify-items: center;
+}
+
+/*
+ Demo purposes only
+*/
+.tabset {
+  max-width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr auto auto 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr auto auto 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+}
+
+.tabset > label {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 1px;
+}
+
+.tabset > label:nth-child(2) {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5/6;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.tabset > label:nth-child(4) {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-column: 6/7;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.tab-panel {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: #ECDDB6;
+}
+
+.tab-panel > .card {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
+  position: relative;
+  padding: .5rem 1rem;
+  margin-bottom: 1rem;
+  display: block;
+  width: 250px;
+}
+
+.tab-panel > .card > .tag {
+  height: 100px;
+  width: 100%;
+  text-align: center;
+}
+
+.tab-panel > .card > .tag > span {
+  font-family: 'Aladin', sans-serif;
+  font-size: clamp(2rem, calc(5vw + 1rem), 3rem);
+  line-height: 1;
+}
+
+.tab-panel > .card > .card__img {
+  display: -ms-grid;
+  display: grid;
+  height: auto;
+  justify-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  padding-bottom: 1em;
+}
+
+.tab-panel > .card > .card__img > img {
+  height: 100%;
+  width: 100%;
+  max-height: 230px;
+  max-width: 230px;
+}
+
+.tab-panel > .card > span > p {
+  font-family: "SFUIText", sans-serif;
+  font-size: 17px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .tab-panel {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .tab-panel > .card {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .tab-panel > .card > .tag {
+    height: 100px;
+  }
+  .tab-panel > .card .card__img {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .tab-panel > .card {
+    position: relative;
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+  }
+  .tab-panel > .card .card__img {
+    height: 300px;
+  }
+  .tab-panel > .card > span {
+    position: relative;
+  }
+  .tab-panel > .card > span > p::after {
+    content: '';
+    position: absolute;
+    width: 280px;
+    height: 1px;
+    bottom: 0;
+    left: 20%;
+    background-color: #ECDDB6;
+  }
+  .tab-panel > :not(:nth-child(4))::after {
+    content: "";
+    position: absolute;
+    right: -1rem;
+    top: 25%;
+    width: 2px;
+    height: 50%;
+    background-color: #372c18;
+  }
+}
+/*# sourceMappingURL=tabs.css.map */

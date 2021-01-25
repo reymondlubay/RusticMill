@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
+@import url('../fonts/sf-ui-text/SFUIText-Light.woff');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+//Style variables
+
+$background: rgba(36, 35, 35, .85);
+$background1: rgba(36, 35, 35, 1);
+$breadColor: rgb(7,7,7);
+$breadColorFade: rgba(7,7,7, .8);
+$myYellow: #1a1a1a;
+$offWhite: #ECDDB6;
+$myBrown: #3b3421;
+$navbgcolor: rgb(125, 42, 12);
+$navbgcolorfade: rgba(125, 42, 12, 0.75);
+$taglinebgfade: rgba(125, 42, 12, 0.3);
+$aboutbg:#433512;
+$menubg: rgb(236, 221, 182);
+$maroon: #7D2A0C;
+
+/*
+ CSS for the main interaction
+*/
+
+
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: flex;
+}
+
+/*
+ Styling
+*/
+
+.tabset > label {
+  position: relative;
+  display: inline-block;
+  padding: 15px 15px 25px;
+  //border: 1px solid transparent;
+  //border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
+  color: $offWhite;
+  font-size:20px;
+  text-transform: uppercase;
+}
+
+// .tabset > label::after {
+//     content: "";
+//     position: absolute;
+//     left: 15px;
+//     bottom: 20px;
+//     width: 85%;
+//     height: 4px;
+//     background: $offWhite;
+//     transform-origin:left;
+//     transform: scale(0, 1);
+//     transition: transform ease-in-out 250ms;
+    
+// }
+
+.tabset > label:nth-child(2)::after  {
+    content: "";
+    position: absolute;
+    left: 15px;
+    bottom: 20px;
+    width: 80%;
+    height: 4px;
+    background:$offWhite;;
+    transform-origin:right;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  .tabset > label:nth-child(4)::after  {
+    content: "";
+    position: absolute;
+    left: 15px;
+    bottom: 20px;
+    width: 85%;
+    height: 4px;
+    background: $offWhite;;
+    transform-origin:left;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+
+.tabset > label:hover,
+.tabset > input:focus + label {
+  color:  $offWhite;
+}
+
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+  background: $offWhite;  
+}
+
+
+
+.tabset > input:checked + label::after {
+    transform: scale(1,1);
+}
+
+// .tabset > input:checked + label {
+// //   border-color: #ccc;
+// //   border-bottom: 1px solid #fff;
+// //   margin-bottom: -1px;
+// }
+
+.tab-panels {
+  padding: 30px 0;
+  padding-top: 0;
+  border-top: 1px solid #333;
+  grid-column: 2/10;
+  grid-row:2/3;
+  justify-items: center;
+
+  #story{
+
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4em;
+
+    & > .story-img{
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink:0;
+
+      & > img{
+        display:inline-block;
+        height:65vh;
+        width:100%
+      }
+
+      & > span{
+        width:100%;
+        font-family: 'SFUIText', sans-serif;
+        background: $maroon;
+        padding: .75rem;
+        text-align: center;
+      }
+
+    }
+
+    
+    
+    
+  }
+}
+
+/*
+ Demo purposes only
+*/
+
+
+.tabset {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr auto auto 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+
+  &>label{
+      font-family: "Bebas Neue", sans-serif;
+      letter-spacing: 1px;
+  }
+}
+
+.tabset > label:nth-child(2){
+    grid-column:5/6;
+    grid-row: 1/2;
+}
+.tabset > label:nth-child(4){
+    grid-column:6/7;
+    grid-row: 1/2;
+}
+
+.tab-panel{
+        justify-content: center;
+        flex-wrap: wrap;
+        color: $offWhite;
+      
+
+    & > .card{
+        flex-basis: 60%;
+        flex-shrink: 2;
+        position: relative;
+        padding: .5rem 1rem;
+        margin-bottom: 1rem;
+        display: block;
+        width:250px;
+        // max-height:230px;
+        // max-width:230px;
+
+        & > .tag{
+            height:100px;
+            width: 100%;
+            text-align: center;
+            & > span{
+                font-family: 'Aladin', sans-serif;
+                font-size: clamp(2rem, calc(5vw + 1rem), 3rem);
+                line-height: 1;
+                
+            }
+        }
+
+        & > .card__img{
+            display: grid;
+            height:auto;
+            justify-items:center;
+            align-items:end;
+            padding-bottom:1em;
+            
+        }
+
+        & > .card__img > img{
+            height: 100%;
+            width:100%;
+            max-height:230px;
+            max-width:230px;
+        }
+
+        &>span>p {
+          font-family: "SFUIText", sans-serif;
+          font-size: 17px;
+          text-align: center;
+        }
+
+        // &:not(:last-child)::after{
+        //     content: "";
+        //     position: absolute;
+        //     right: -1rem;
+        //     top: 25%;
+        //     width: 2px;
+        //     height: 50%;
+        //     background-color:rgb(55, 44, 24);
+        // }
+          // #story>span>p{
+          //   font-size: clamp(1rem,calc(2vw + 1rem), 3vw);
+          // }
+
+    }
+
+    
+
+    
+
+}
+
+
+@media  screen and(min-width: 768px){
+  .tab-panel{
+    justify-content: space-around;
+    
+    & > .card{
+      flex-basis: 50%;
+
+      & > .tag{
+        height: 100px;
+      }
+
+      & .card__img{
+        height:200px;
+      }
+  
+    }
+
+    
+  }
+
+  // .tab-panels > #story{
+
+  //   flex-wrap: wrap;
+  //   flex-direction: row;
+  //   justify-content: center;
+  //   gap: 4em;
+
+  //   & > .story-img{
+
+  //     display: flex;
+  //     flex-direction: column;
+  //     align-items: center;
+  //     flex-shrink:0;
+
+  //     & > img{
+  //       display:inline-block;
+  //       height:550px;
+  //       width:100%
+  //     }
+
+  //     & > span{
+  //       width:100%;
+  //       font-family: 'SFUIText', sans-serif;
+  //       background: $maroon;
+  //       padding: .75rem;
+  //       text-align: center;
+  //     }
+
+  //   }
+
+    
+    
+    
+  // }
+
+  #story > span {
+    width: auto;
+    min-width:400px;
+    flex-basis: 30%;
+    display: grid;
+    place-items: center;
+    
+
+    p{
+      text-align: justify;
+    font-family: 'SFUIText', sans-serif;
+    width: 100%;
+    }
+  }
+}
+
+@media screen and(min-width: 1200px){
+  
+.tab-panel{
+  & > .card{
+    position: relative;
+    flex-basis: 20%;
+
+    & .card__img{
+      height:300px;
+      border-bottom: 1px solid $offWhite;
+    }
+
+    &>span{
+      position: relative;
+      // &>p::after{
+      //   content: '';
+      //   position: absolute;
+      //   width:280px;
+      //   height:1px;
+      //   bottom:0;
+      //   left:20%;
+      //   background-color: $offWhite;
+      // }
+    }
+    
+
+  }
+  &>:not(:nth-child(4))::after{
+    content: "";
+    position: absolute;
+    right: -1rem;
+    top: 25%;
+    width: 2px;
+    height: 50%;
+    background-color:rgb(55, 44, 24);
+}
+
+    
+
+
+}
+
+
+
+
+
+}
+
+

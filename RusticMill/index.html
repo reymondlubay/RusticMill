@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/tabs-about.css">
+    <link rel="stylesheet" href="css/tabs-menu.css">
+
+
+    
+    <title>Rustic Mill</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <!-- <div class="logo__title">
+            <h3>Rustic Mill </h3>
+          </div> -->
+          <div class="logo__img"> <img src="img/logo.png" alt="logo"></div>
+        </div>
+        
+        <input type="checkbox" class="nav-toggle" id="nav-toggle" >
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#aboutAnchor">About Us</a></li>
+          </ul>
+        <a class="nav-logo">
+            <img src="img/logo.png" alt="logo">
+        </a>
+          <ul>
+            <li><a href="#menuAnchor">Menu</a></li>
+            <li><a href="#locationAnchor">Contact Us</a></li>
+          </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></i></span>
+        </label>
+    </header>  
+    <section class="hero">
+        <div class="tagline">
+            <h1>Fresh <br>in every<br>bite.</h1>
+        </div>
+        <div class="hero__contact">
+            <img src="img/Telephone.png" alt="">
+            <span><p>07 55967004 / +089-765432100</p></span>
+        </div>
+    </section>
+    <section class="about" id="about">
+      <a href="#" class="section-anchor" id="aboutAnchor"></a>
+      <div class="about-title">About Us</div>
+      <div class="about-content">
+        <div class="tabset">
+            <!-- Tab 1 -->
+            <input type="radio" name="tabset" id="tab1" aria-controls="tab1" checked>
+            <label for="tab1" id="lblTab1">Our Story</label>
+            <!-- Tab 2 -->
+            <input type="radio" name="tabset" id="tab2" aria-controls="tab2">
+            <label for="tab2" id="lblTab2">Our Commitment</label>
+          
+          
+          <div class="tab-panels">
+            <section id="story" class="tab-panel">
+              <div class="story-img">
+                <img src="img/Store.jpg" alt="">
+                <span>Rustic Mill Shop</span>
+              </div>
+              <span>
+                <p>Rustic Mill Bakery, also used to be known as Saamaria's Continental Bakery,   
+                specializes in Traditional Italian Breads, Sourdoughs, Focaccias, Smallgoods, Olives, Preserves
+                 and a wide variety of Italian grocery products. We are not only about bread and pastries, but we also offer fresh cheeses, hams, prosciutto, sauces, olives, pasta, 
+                jams and many more. We dedicate ourselves to provide the best experience-for our customers-in every bite.</p>
+              </span>
+            </section>
+            <section id="commit" class="tab-panel">
+              <div class="card">
+                <div class="tag">
+                  <span>Always Fresh</span>
+                </div>
+                <div class="card__img">
+                  <img src="img/always-fresh.png" alt=""></a>
+                </div>
+                <span>
+                  <p>We promise to uphold a quality that provides products that are always fresh.</p>
+                </span>
+              </div>
+              <div class="card">
+                <div class="tag">
+                <span>Mouthwatering Taste</span>
+                </div>
+                <div class="card__img"><img src="img/mouthwatering.png" alt=""></div>
+                <span>
+                  <p>We are dedicated to make every product we make the tastiest to provide mouthwatering experience</p>
+                </span>
+              </div>
+              <div class="card">
+                <div class="tag"><span>Made with best ingredients</span></div>
+                <div class="card__img"><img src="img/made-with-best.png" alt=""></div>
+                <span>
+                  <p>In Rustic Mill, to ensure the freshness and taste of our products, we choose and use the best ingredients we can.</p>
+                </span>
+              </div>
+              <div class="card">
+                <div class="tag"><span>Baked with Love</span></div>
+                <div class="card__img"><img src="img/baked-with-love.png" alt=""></div>
+                <span>
+                  <p>Most importantly, we enjoy and we love what we do, and we hope to share this love and joy with you.</p>
+                </span>
+              </div>
+                
+            </section>
+        </div>
+        
+      </div>
+
+      </div>
+    </section>
+    <section class="menu" id="menu">
+      <a href="#" class="section-anchor" id="menuAnchor"></a>
+      <div class="menu-title">Our Menu</div>
+      <div class="menu-content">
+        <div class="tabset-menu">
+          <!-- Tab 1 -->
+          <input type="radio" name="tabset-menu" id="tab-bread" aria-controls="tab-bread" checked>
+          <label for="tab-bread" id="lbl-bread">Bread</label>
+          <!-- Tab 2 -->
+          <input type="radio" name="tabset-menu" id="tab-cake" aria-controls="tab-cake">
+          <label for="tab-cake" id="lbl-cake">Cakes</label>
+          <!-- Tab 3 -->
+          <input type="radio" name="tabset-menu" id="tab-jam" aria-controls="tab-jam">
+          <label for="tab-jam" id="lbl-jam">Jams</label>
+          <!-- Tab 4 -->
+          <input type="radio" name="tabset-menu" id="tab-sandwich" aria-controls="tab-sandwich">
+          <label for="tab-sandwich" id="lbl-sandwich">Sandwich</label>
+          <!-- Tab 5 -->
+          <input type="radio" name="tabset-menu" id="tab-other" aria-controls="tab-other">
+          <label for="tab-other" id="lbl-other">Others</label>
+        
+          <div class="tab-panels-menu">
+            <section id="panel-bread" class="tab-panel-menu">
+              <div class="product-img">
+                <img src="img/bread/CannoliShells.jpg" alt="">
+                <span>Cannoli Shells</span>
+                <p>
+                  Crunchy fried pastry dough shaped like a tube. </p>
+              </div>
+              <div class="product-img">
+                <img src="img/bread/Cannoli.jpg" alt="">
+                <span>Cannoli</span>
+                <p>
+                  Canoli Filled With Chocolate Or Vanilla</p>
+                </div>
+              <div class="product-img">
+                <img src="img/bread/Focaccia.jpg" alt="">
+                <span>Hazelnut and Pistachio Croissants</span>
+                <p>
+                  Buttery and flaky croissant flavored with hazelnut and pistachio</p>
+              </div>
+              <div class="product-img">
+                <img src="img/bread/hazelnutPistachiocroissants.jpg" alt="">
+                <span>HM Almond Croissants</span>
+                <p>
+                  Light and delicately sweet almost croissant</p>
+              </div>
+              <div class="product-img">
+                <img src="img/bread/HMAlmondCroissants.jpg" alt="">
+                <span>HM Almond Croissants</span>
+                <p>
+                  Light and delicately sweet almost croissant</p>
+              </div>
+              <div class="product-img">
+                <img src="img/bread/HMDateScones.jpg" alt="">
+                <span>HM Date Scones</span>
+                <p>
+                  Crumbly scones flavored with dates. Best to accompany with tea or any beverage of your choosing.</p></p>
+              </div>
+              <div class="product-img">
+                <img src="img/bread/ItalianSfogliatelle.jpg" alt="">
+                <span>Italian Sfogliatelle</span>
+                <p>
+                  Crispy Layers of Pastry filled with Ricotta</p>
+              </div>
+              <div class="product-img">
+                <img src="img/bread/PastaDura.jpg" alt="">
+                <span>Pasta Dura, Calabria Roll and Baby Ciabatta</span>
+                <p>
+                  Italian Bread made with semolina flour. It has a crunchy exterior but soft and chewey interior.</p>
+              </div>
+              <div class="product-img">
+                <img src="img/bread/PulledBeefPie.jpg" alt="">
+                <span>Pulled Beef Pie</span>
+                <p>
+                  New deep dish pulled Beef pie range, Pulled beef with chorizo and cheese, Pulled beef Aussie bush pepper, Pulled beef chunky, Pulled beef with mushroom and guinness cheese</p>
+              </div>
+              <div class="product-img">
+                <img src="img/bread/Sourdough.jpg" alt="">
+                <span>Sour Dough Bread</span>
+                <p>
+                  72 hours spelt and 48 HR Light rye stoned bake and Half Crafted</p>
+              </div>
+              
+              
+            </section>
+            <section id="panel-cake" class="tab-panel-menu">
+              <div class="product-img">
+                <img src="img/cake/DeliciousRicottaandPearCake.jpg" alt="">
+                <span>Delicious Ricotta And Pear Cake</span>
+                <p>
+                  Creamy filling of ricotta and pear cake in between flavorful dacquoise.
+                </p>
+              </div>
+              <div class="product-img">
+                <img src="img/cake/HomemadeBrownieSlice.jpg" alt="">
+                <span>Homemade Brownie Slice</span>
+                <p>
+                  Squares of chococatey cake made fudgy for a better brownie experience.
+                </p>
+              </div>
+              <div class="product-img">
+                <img src="img/cake/HomeMadeVanillaSlice.jpg" alt="">
+                <span>Homemade Vanilla Slice</span>
+                <p>
+                  Pastry of thick custard traditionally flavored with vanilla in between flaky sheets. 
+                </p>
+              </div>
+              <div class="product-img">
+                <img src="img/cake/ItalianLemonCake.jpg" alt="">
+                <span>Italian Lemon Cake</span>
+                <p>
+                  Delicate layers of chantilly cream layered over a soft vanilla sponge
+                </p>
+              </div>
+              <div class="product-img">
+                <img src="img/cake/ItalianRumandPearCake.jpg" alt="">
+                <span>Italian Rum and Pear Cake</span>
+                <p>
+                  Traditional pear cake made with liquor, italian rum.
+                </p>
+              </div>
+              <div class="product-img">
+                <img src="img/cake/PistachioandRicottaCake.jpg" alt="">
+                <span>Pistachio and Ricotta Cake</span>
+                <p>
+                  Flavorful cake made with the beautiful tandem of ricotta and pistachio on a wonderful crust.
+                </p>
+              </div>
+              
+            </section>
+            <section id="panel-jam" class="tab-panel-menu">
+              <div class="product-img">
+                <img src="img/jam/jam.jpg" alt="">
+                <span>Italian Jams</span>
+                <p>
+                  Italian Jams</p>
+              </div>
+              <div class="product-img">
+                <img src="img/jam/marmalade.jpg" alt="">
+                <span>Marmalade </span>
+                <p>
+                  It's Marmalade </p>
+              </div>
+            </section>
+            <section id="panel-sandwich" class="tab-panel-menu">
+              <div class="product-img">
+                <img src="img/sandwich/sandwich1.jpg" alt="">
+                <span>Rustic English Muffin Sandwich</span>
+                <p>
+                  Bacon, Egg, Cheese & Baby Spinach with BBQ Sauce on Herbed Focaccia...</p>
+              </div>
+              <div class="product-img">
+                <img src="img/sandwich/sandwich2.jpg" alt="">
+                <span>Rustic Baby Ciabatta Sandwich</span>
+                <p>
+                  Pepper Mortadella, Salami, Italian Cheese with Truffle Mayonnaise on Fresh Baby Ciabatta</p>
+              </div>
+              <div class="product-img">
+                <img src="img/sandwich/sandwich4.jpg" alt="">
+                <span>Ham and Egg Sandwich</span>
+                <p>
+                  Bacon, Egg, Cheese & Baby Spinach with BBQ Sauce on Herbed Focaccia.</p>
+              </div>
+            </section>
+            <section id="panel-other" class="tab-panel-menu">
+              <div class="product-img">
+                <img src="img/other/cheese.jpg" alt="">
+                <span>Essenza Italiana</span>
+                <p>
+                  Italian and natural, made only with milk, salt and vegetable rennet.
+                </p>
+              </div>
+              <div class="product-img">
+                <img src="img/other/gelato-1.jpg" alt="">
+                <span>Gelato</span>
+                <p>
+                  Creamy gelato handmade by an Italian family. <br> <i>Il Gelato</i>
+                </p>
+              </div>
+              <div class="product-img">
+                <img src="img/other/drink-orzata.jpg" alt="">
+                <span>Italian Cordials</span>
+                <p>
+                 Available in Orange, Almond, Lemon and Strawberry.
+                </p>
+              </div>
+            </section>
+            </div>
+      </div>
+    </section>
+    <section class="location" id="location">
+      <a href="#" class="section-anchor" id="locationAnchor"></a>
+      <div class="location-title">Location</div>
+      <div class="map-container">
+        <iframe loading="lazy" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=701&height=473&hl=en&q=16%20Hilldon%20Court%20%20Nerang%20Nerang+()&t=k&z=15&ie=UTF8&iwloc=B&output=embed" width="701" height="473" frameborder="0"></iframe> <a href='https://embedmaps.org/'>map generator</a> <script type='text/javascript' src='https://maps-generator.com/google-maps-authorization/script.js?id=af1509e3612186752f82dc16b6220a49bc9ae5db'></script>
+      </div>
+      <div></div>
+      <div class="location__contact">
+        <img src="img/Telephone.png" alt="">
+        <span>07 55967004</span>
+
+      </div>
+      <div class="location__contact">
+        <img src="img/Telephone.png" alt="">
+        <span>+089-765432100</span>
+      </div>
+      <div class="location__contact">
+        <img src="img/Email.png" alt="">
+        <span>rusticmill@outlook.com</span>
+      </div>
+        
+    </div>
+    </section>
+    <section class="footerMain" id="location">
+      <a href="#" class="section-anchor" id="footerAnchor"></a>
+    <div class="footer">
+      <div class="footer-logo">
+        <a href="#">
+          <img src="img/logo.png" alt="">
+        </a>  
+      </div>
+      <div class="footer-home">
+        <a href="#">HOME</a>
+      </div>
+      <div class="footer-about">
+        <a href="#aboutAnchor">About Us</a>
+        <ul>
+          <li>Our Story</li>
+          <li>Our Commitment</li>
+        </ul>
+      </div>
+      <div class="footer-menu"> 
+        <a href="#menuAnchor">Our Menu</a>
+        <ul>
+          <li>Bread</li>
+          <li>Cakes</li>
+          <li>Jams</li>
+          <li>Sandwiches</li>
+          <li>Others</li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <a href="#locationAnchor">Contact Us</a>
+        <ul>
+          <li><img src="img/Telephone.png">07 5596 7004</li>
+          <li><img src="img/Telephone.png">+089-7654321</li>
+          <li><img src="img/Email.png">rusticmill@outlooc.com</li>
+          <li>16 Hilldon Court, Nerang Nerang, <br>QLD, Australia
+            4211
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-WFIYMMr8mh3R5bOxUzAvhRDQmeqfExI&callback=initMap&libraries=&v=weekly" defer></script>
+<script src="js/observer.js" defer></script>
+
+<script>
+  $("nav ul li").on("click", function(){
+    $("#nav-toggle").trigger("click");
+  });
+
+  $('.map-container > a').css("visibility", "hidden");
+
+  function initMap() {
+        // The location of Uluru
+        const uluru = { lat: -25.344, lng: 131.036 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        });
+      }
+</script>
+</html>
